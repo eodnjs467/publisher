@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrap > aside {
+	width: 332px;
+	float: right;
+	text-align: center;	
+	border: 1px solid #ccc;
+}
+
+#wrap > aside > h1 {
+	color: #060;	
+}
+
+#wrap > aside > h3 { color: #690; }
+
+

@@ -1,0 +1,19 @@
+HTML5
+What is New in HTML5?<br/>
+        The DOCTYPE declaration for HTML5 is very simple<br/>
+        The character encoding (charset) declaration is also very simple
+
+
+
+
+CSS3
+CSS3 is the latest standard for CSS.<br/>
+      CSS3 is completely backwards-compatible with earlier versions of CSS.<br/>
+      This section teaches you about the new features in CSS3!
+
+
+
+JQuery
+jQuery is a JavaScript Library.<br/>
+        jQuery greatly simplifies JavaScript programming.<br/>
+        jQuery is easy to learn.

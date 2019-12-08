@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+#coffee1 {
+	padding-left: 590px;	
+	background: url("../images/product1.jpg") no-repeat;
+	height: 300px;
+}
+
+#coffee2 {
+	padding-left: 590px;
+	background: url("../images/product2.jpg") no-repeat;
+	height: 289px;	
+}

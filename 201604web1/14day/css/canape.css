@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { 
+	background: #690; 
+	margin: 0;
+}
+
+a {
+	color: #333;
+	text-decoration: none;	
+}
+
+#wrap {
+	width: 800px;
+	margin: 0 auto;	
+}
+
+#wrap > header { background-color: #7e101c; }
+
+#wrap > section { background-color: #FDF9CA; }
+
+#wrap > section > article {
+	padding: 100px 40px;	
+	word-break: keep-all;
+}
+
+#wrap > section > article > h1 {
+	font-size: 50px;
+	text-align: center;
+	padding-bottom: 10px;
+	border-top: 2px solid #7e101c;
+	border-bottom: 2px solid #7e101c;
+}
+
+#wrap > section > article > h2 {
+	color: #366;
+}
+
+#wrap > section > #canape1 > h3 {
+	color: #555;
+	margin-bottom: 100px;
+}
+
+#wrap > section > #canape1 > .txt {
+	width: 200px;
+	height: 214px;
+	margin: 0 20px;
+	box-sizing: border-box;
+	float: left;
+	overflow: hidden;
+	word-break: normal;
+	position: relative;
+	color: #555;
+}
+
+#wrap > section > #canape1:after {
+	content: "";
+	display: block;
+	clear:both;	
+}
+
+#wrap > section > #canape1 > .txt:first-letter {
+	font-size: 50px;
+	font-wieght: bold;
+	color: #FDF9CA;
+	margin-right: 20px;
+	float: left;	
+	background: #930;
+}
+
+
+#wrap > section > #canape1 > .txt:after {
+	content: "...";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: block;
+	padding: 0 10px 0 50px;
+	font-weight: bold;
+	font-size: 18px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fdf9ca+0,fdf9ca+100&0+0,1+60 */
+background: -moz-linear-gradient(left,  rgba(253,249,202,0) 0%, rgba(253,249,202,1) 60%, rgba(253,249,202,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(253,249,202,0) 0%,rgba(253,249,202,1) 60%,rgba(253,249,202,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(253,249,202,0) 0%,rgba(253,249,202,1) 60%,rgba(253,249,202,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fdf9ca', endColorstr='#fdf9ca',GradientType=1 ); /* IE6-9 */
+
+}
+
+
+#wrap > section > article > h3 { color: #930; }
+#wrap > section > article > h4 { 
+	padding: 10px;
+	color: white; 
+	background-color:#963;
+}
+#wrap > section > article > p { color: #069; }
+#wrap > section > article > ol { background-color:#963; }
+#wrap > section > article > ol > li { 
+	padding: 10px 0; 
+	color: white;	
+	font-weight: bold;
+}
+
+/*-- 귀배너 --*/
+
+#menu_bar {
+	width: 120px;
+	position: fixed;
+	background: #FFC;
+	top: 313px;
+	margin-left: 50%;
+	left: 415px;	
+}
+
+#menu_bar > ul {
+	margin: 0;
+	padding: 0;	
+	list-style : none;
+}
+
+#menu_bar > ul > li {
+	text-align: center;
+	padding: 10px 0;	
+}
+
+#menu_bar > ul > li:nth-of-type(4) {
+	background: #7e101c;
+	margin-top: 25px;	
+}
+
+#menu_bar > ul > li > a {
+	display: block;
+	color: #7e101c;
+	font-weight: bold;
+}
+
+#menu_bar > ul > li:nth-of-type(4) > a { color: white; }
+
+
+
+
+
+
+
+

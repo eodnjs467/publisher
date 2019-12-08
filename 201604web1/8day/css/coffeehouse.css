@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrap > section > article > #digital {
+	background-color: #555;
+	color: white;
+	padding: 10px;	
+	margin-bottom: 30px;
+}
+
+#wrap > section > article > table {
+	border-top: 1px solid #690;
+	border-left: 1px solid #690;	
+}
+
+#wrap > section > article > table td {
+	border-right: 1px solid #690;
+	border-bottom: 1px solid #690;
+	padding: 5px 10px 40px;
+	width: 33%;
+}
+
+#wrap > section > article > table span {
+	color: #066;
+	font-weight: bold;	
+}
+
+
+

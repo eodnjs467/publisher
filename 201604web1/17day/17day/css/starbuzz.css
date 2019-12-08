@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	background: url("../images/background2.gif");
+}
+
+#wrap {
+	width: 800px;
+	margin: 0 auto;	
+}
+
+#wrap > header {
+	background: #685d48;
+	margin-bottom: 15px;	
+}
+
+#wrap > aside {
+	width: 300px;
+	padding: 10px 45px;
+	box-sizing: border-box;
+	float: right;
+	background: url("../images/background.gif"); 
+}
+
+#wrap > aside > h3 {
+	text-align: center;
+	line-height: 28px;
+}
+
+#wrap > aside > h3 > span {
+	color:  #910000;	
+}
+
+#wrap > section  {
+	background: url("../images/background.gif");
+	padding: 15px;
+	margin-right: 315px;	
+}
+
+#wrap > section > h2 { color: #910000; }
+
+#wrap > footer {
+	background: #685d48;
+	color: #f3e99e;
+	padding: 25px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+
+
+
+
+
+

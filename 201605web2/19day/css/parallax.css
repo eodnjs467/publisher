@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+html, body, #wrap { height: 100%; }
+
+#wrap > .contents {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	min-width: 1200px;
+	min-height: 900px;
+	overflow: hidden;	
+}
+
+#page1 {
+	background: url("../images/bg1.jpg") center center fixed;
+	background-size: cover;	
+	z-index: 4;
+}
+
+#page2 {
+	background: url("../images/bg2.jpg") center center fixed;
+	background-size: cover;	
+	z-index: 3;
+}
+
+#page3 {
+	background: url("../images/bg3.jpg") center center fixed;
+	background-size: cover;	
+	z-index: 1;
+}
+
+#page4 {
+	background: url("../images/bg4.jpg") center center fixed;
+	background-size: cover;	
+	z-index: 2;
+}
+
+#page1 > div {
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	color: white;
+	text-align: center;	
+}
+
+#page1 > div > h1 { font-size: 240px; } 
+
+#page1 > div > span {
+	position: absolute;
+	bottom: 20%;
+	left: 0;
+	right: 0;
+	margin: auto;	
+}
+
+#page2 > div {
+	width: 100%;
+	padding: 20px;
+	color: white;
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 7%;
+	left: 0;
+}
+
+.contents > div > h1 { font-size: 84px; }
+.contents > div > p { font-size: 18px; }
+
+#page2 > span {
+	position: absolute;
+	bottom: 5%;
+	right: 5%;	
+}
+
+#page3 > #css_txt {
+	width: 500px;
+	height: 300px;
+	padding: 20px;
+	background: rgba( 255, 255, 255, 0.7 );
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 15%;
+	margin: auto;	
+}
+
+#page3 > span {
+	position: absolute;
+	bottom: 20%;
+	right: 5%;	
+}
+
+#page3 > #snow_bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 3;
+	background: url("../images/1.png"), url("../images/2.png"), url("../images/3.png");
+	animation: snow 20s linear infinite;	
+}
+
+@-webkit-keyframes snow {
+	from { background-position: 0px 0px, 0px 0px, 0px 0px; }	
+	to { background-position: 500px 1000px, 400px 800px, 300px 600px; }
+}
+
+#page4 > #jquery_txt {
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	padding: 100px;
+	box-sizing: border-box;
+	background: rgba( 255, 255, 255, 0.7 );
+	position:absolute;
+	bottom: 10%;
+	right: 15%;	
+}
+
+#page4 > span {
+	position: fixed;	
+	bottom: 0;
+	right: 7%;
+}
+
+#page4 > #cloud_bg {
+	width: 100%;
+	height: 269px;
+	z-index: 3;
+	background: url("../images/cloud.png");
+	position: absolute;
+	top: 8%;	
+	left: 0;
+	animation: cloud 15s linear infinite;
+}
+
+@-webkit-keyframes cloud {
+	from{ background-position-x: 0px; }	
+	to { background-position-x: 1000px; }
+}
+
+#btn {
+	width: 60px;
+	height: 360px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 15px;
+	margin: auto;
+	background: rgba( 255, 255, 255, 0.7 );
+	z-index: 10;	
+}
+
+#btn > ul { list-style: none; }
+
+#btn > ul > li {
+	width: 50px;
+	height: 80px;
+	padding: 5px;
+	cursor: pointer;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

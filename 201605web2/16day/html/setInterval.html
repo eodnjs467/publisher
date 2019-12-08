@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script>
+/*----------------------------------------------------------------------------------------
+
+	setTimeout( 함수이름, 지연시간 )
+	-> 한번 실행하고 중지
+
+	setInterval( 함수이름, 지연시간 )
+	-> 지연시간 마다 함수 호출
+
+	clearInterval( setInterval의 이름 )
+	-> setInterval을 정지
+	
+	-> 지연시간은 ms단위( 1000 -> 1초 )
+	-> 변수로 지정해서 사용해야 중복실행을 막을 수 있음.	
+
+-----------------------------------------------------------------------------------------*/
+
+var cnt = 0;			//동작 횟수 변수
+
+var timer = setInterval( run_count, 1000 );
+
+function run_count() {
+	
+	cnt++;			//cnt값을 1씩 증가
+	
+	$( 'p' ).text( cnt + '번 동작' );
+	
+}
+
+
+</script>
+</head>
+
+<body>
+
+<p>0번 동작</p>
+
+</body>
+</html>

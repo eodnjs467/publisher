@@ -1,0 +1,332 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	color: white; 
+}
+
+body {
+	margin: 0;
+	background: black;	
+}
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+}
+
+a {
+	color: inherit;
+	text-decoration: none;	
+}
+
+/* header */
+header {
+	width: 100%;
+	min-width: 1200px;
+	height: 120px;
+	position: fixed;
+	z-index: 100;	
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+99 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 99%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 99%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 99%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+header > nav {
+	width: 1000px;
+	margin: 0 auto;	
+}
+
+header > nav > h1 { font-size: 30px; }
+
+header > nav > #gnb { 
+	font-weight: bold;
+	text-align: right;
+}
+
+header > nav > #gnb > ul > li { 
+	margin: 0 15px;
+	display: inline-block;
+}
+
+
+/* section */
+
+section {
+	width: 100%;
+	min-width: 1200px;	
+}
+
+section > article {
+	width: 100%;
+	height: 800px;
+	position: relative;
+	padding-top: 380px;	
+}
+
+section > article > .top_tlt {
+	width: 100%;
+	height: 280px;
+	line-height: 280px;
+	text-align: center;
+	font-size: 80px;
+	font-weight: bold;
+	color: #333;
+	background: rgba( 255, 255, 255, 0.6 );
+	position: absolute;	
+	top: 0;
+}
+
+section a { color: #0d0d0d; }
+
+/* main_visual */
+section > #main_visual {
+	width: 100%;
+	paddin-top: 0;
+	background: url("../images/main_bg.jpg") center center;
+	background-size: cover;	
+}
+
+/* store */
+section > #store { height: 500px; }
+
+section > #store > ul {
+	width: 1000px;	
+	height: 510px;
+	margin: 0 auto;
+	padding: 0 200px;
+	box-sizing: border-box;
+	background: url("../images/store_list_line.png") center center;	
+}
+
+section > #store > ul > li {
+	height: 40px;
+	line-height: 40px;	
+}
+
+section > #store > ul > li > span { float: right; }
+section > #store > ul > li > span > img { vertical-align: middle;}
+
+/* menu */
+section > #menu {
+	background: url("../images/menu_bg.jpg") center center;
+	background-size: cover;
+}
+
+section > #menu > h1 {
+	width: 80%;
+	margin: auto;
+	margin-top: 50px;
+	font-size: 40px;	
+}
+
+section > #menu > #menu_list {
+	width: 80%;
+	margin : 0 auto;	
+}
+
+section > #menu > #menu_list > ul {
+	width: 400px;
+	height: 400px;
+	margin: 25px 70px;	
+}
+
+section > #menu > #menu_list > ul > li {
+	width: 160px;
+	height: 160px;
+	margin: 20px;
+	text-align: center;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.8);
+	float: left;	
+}
+
+section > #menu > #menu_list > ul > li > a {
+	width: 160px;
+	height: 160px;
+	display: block;
+	padding-top: 70px;
+	box-sizing: border-box;	
+}
+
+section > #menu > #menu_list > ul > li:nth-of-type(3) > a { padding-top: 60px; }
+
+section > #menu > #menu_list > ul:after {
+	content: "";
+	display: block;
+	clear: both;	
+}
+
+/* franchise1 */
+
+section > #franchise1 {
+	padding-bottom: 250px;
+	border-bottom: 2px solid white;	
+}
+
+section > #franchise1 > #franchise_txt {
+	width: 1000px;
+	margin: 0 auto;	
+}
+
+section > #franchise1 > #franchise_txt > #franchise_img {
+	width: 580px;
+	height: 362px; 
+	padding-top: 40px;
+	box-sizing: border-box;
+	margin-right: 50px;
+	margin-bottom: 150px;
+	float: left;
+}
+
+section > #franchise1 > #franchise_txt > h1 {
+	font-size: 24px;
+	color: #f26522;
+	margin: 5px 0;	
+}
+
+section > #franchise1 > #franchise_txt > h1 > span {
+	font-size: 18px;
+	color: #b42b16;	
+}
+
+section > #franchise1 > #franchise_txt > p {
+	color: #a1a1a1;
+	margin-top: 0;
+	margin-bottom: 35px;
+	line-height: 20px;
+	font-size: 14px;	
+}
+
+section > #franchise1 > #franchise_txt > p > span {
+	color: white;
+	font-weight: bold;	
+}
+
+section > #franchise1 > #arrow {
+	width: 50px;
+	height: 50px;
+	background: black;
+	border-right: 2px solid white;
+	border-bottom: 2px solid white;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -27px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 10;
+}
+
+/* franchise2 */
+
+section > #franchise2 {
+	padding-top: 100px;
+	text-align: center;
+	background: url("../images/franchise_bg.jpg") center center;
+	background-size: cover;	
+}
+
+section > #franchise2 > h1 { font-size: 50px; }
+
+section > #franchise2 > h1 > span { 
+	font-size: 35px;
+	display: block;
+}
+
+section > #franchise2 > h2 { font-size: 30px; }
+
+section > #franchise2 > ul {
+	width: 930px;
+	margin: 0 auto;	
+}
+
+section > #franchise2 > ul > li {
+	width: 310px;
+	margin-top: 80px;
+	float: left;	
+}
+
+section > #franchise2 > ul > li > span {
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	border-radius: 50%;
+	margin: 0 80px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #010101;
+	background: rgba( 255, 255, 255, 0.8 );
+	display: block;	
+}
+
+section > #franchise2 > h3 {
+	clear: both;
+	font-size: 30px;
+	color: #f26522;
+	padding-top: 70px;	
+}
+
+/* footer */
+
+footer {
+	width: 100%;
+	min-width: 1200px;
+	text-align: center;
+	padding: 50px;	
+}
+
+footer > #map > a {
+	font-weight: bold;
+	margin: 0 20px;	
+}
+
+footer > #copy {
+	font-size: 14px;
+	line-height: 25px;
+	margin-top: 50px;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

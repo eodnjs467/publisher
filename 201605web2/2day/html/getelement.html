@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<script>
+window.onload = function() {
+	
+	 var get_id = document.getElementById('box1');
+	 
+	 get_id.style.color = "white";
+	 get_id.style.backgroundColor = "pink";
+	 
+	 
+	 var get_class = document.getElementsByClassName('txt');
+	 
+	 get_class[0].style.color = "green";
+	 
+	 
+	 
+	var get_tag = document.getElementsByTagName('h1');
+	
+	//선택자.length;				->		선택자의 갯수
+	for( var i=0; i<get_tag.length; i++ ) {
+	
+		get_tag[i].style.color = "blue";	
+	}
+}
+</script>
+
+</head>
+
+<body>
+
+
+
+<div id="box1">
+	<h1>getElementById</h1>
+   <p class="txt">ID이름을 가져옴</p>
+</div>
+
+<div id="box2">
+	<h1>getElementsByClassName</h1>
+   <p class="txt">Class이름을 가져옴</p>
+</div>
+
+<div id="box3">
+	<h1>getElementsByTagName</h1>
+   <p class="txt">Tag이름을 가져옴</p>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

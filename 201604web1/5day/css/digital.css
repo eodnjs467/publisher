@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { 
+	margin: 0; 
+	background: #d5d5d5 url("../images/bgimage.gif") repeat-x;
+}
+
+h1 { 
+	color : #039; 
+	font-family: Arial; 
+	border-top: 1px solid #06C; 
+	border-bottom: 1px solid #06C; 
+	padding: 10px;
+}
+
+p {	margin: 30px; }
+
+h2 {
+	color: #F60;
+	background-color: black;	
+	padding: 5px 30px;
+}
+
+ul { list-style-image: url("../images/bullet_blue.gif"); }
+
+
+ul > li {
+	color: #006;
+	font-weight: bold;
+	margin-bottom: 30px;	
+}
+
+
+
+
+
+
+
+
+
+
+

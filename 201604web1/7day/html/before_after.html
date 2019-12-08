@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+p:before {
+	content: "Before영역";
+	background: red;
+}
+
+p:after {
+	content: "After영역";
+	background: orange;	
+}
+
+ul { margin: 0; padding: 0;  background: #00F;}
+
+ul > li { 
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	float: left;	
+}
+
+ul:after {
+	content: "";
+	display: block;
+	clear: both;	
+}
+	
+	
+	
+
+
+</style>
+</head>
+
+<body>
+
+<ul>
+	<li>MENU1</li>
+    <li>MENU2</li>
+    <li>MENU3</li>
+    <li>MENU4</li>
+</ul>
+
+<p>전후문자선택자</p>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+
+div {
+	width: 100px;
+	height: 100px;
+	background: #693;
+	margin-bottom: 15px;	
+}
+
+div:hover {
+	width: 500px;
+	background:#933;	
+}
+
+div:nth-child(1) { transition: all 1s linear; }
+div:nth-child(2) { transition: all 1s ease; }
+div:nth-child(3) { transition: all 1s ease-in; }
+div:nth-child(4) { transition: all 1s ease-out; }
+div:nth-child(5) { transition: all 1s ease-in-out; }
+div:nth-child(6) { transition: all 2s cubic-bezier( .50, 0, .50, 1 ); }
+div:nth-child(7) { transition: all 2s steps( 5, start ); }
+div:nth-child(8) { transition: all 2s steps( 5, end ); }
+</style>
+</head>
+
+<body>
+
+<div>linear</div>
+<div>ease</div>
+<div>ease-in</div>
+<div>ease-out</div>
+<div>ease-in-out</div>
+<div>cubic-bezier</div>
+<div>steps start</div>
+<div>steps end</div>
+
+</body>
+</html>

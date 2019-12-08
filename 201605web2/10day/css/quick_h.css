@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+#quick {
+	width: 500px;
+	height: 100px;
+	position: relative;
+	margin: 200px auto;
+	/*background:#096;	*/
+}
+
+#left_btn, #right_btn {
+	width: 17px;
+	height: 22px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 20px;
+	margin: auto;
+	cursor: pointer;	
+}
+
+#right_btn {
+	right: 20px;
+	left: auto;	
+}
+
+#quick > #scroll {
+	width: 400px;
+	height: 100px;
+	margin: 0 auto;
+	overflow: hidden;
+	/*background: #FC3;*/
+}
+
+#quick > #scroll > ul {
+	width: 1200px;
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+#quick > #scroll > ul > li {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	padding-top: 10px;
+	box-sizing: border-box;
+	float: left;	
+}
+
+#quick > #scroll > ul > li > a > img {
+	width: 80px;
+	border: 1px dashed #F66;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+body { background: black; }
+
+#contents {
+	width: 720px;
+	height: 540px;
+	margin: 100px auto;
+	position: relative;		
+}
+
+#contents > #thumb {
+	width: 360px;
+	height: 540px;
+	background-image: url("../images/ironman.jpg");
+	float: left;	
+}
+
+#contents > #thumb > #area {
+	width: 108px;
+	height: 162px;
+	background-color: rgba( 0, 0, 0, 0.4 );
+	cursor: move;	
+}
+
+#contents > #zoom {
+	width: 360px;
+	height: 540px;
+	background-image: url("../images/big_ironman.jpg");
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

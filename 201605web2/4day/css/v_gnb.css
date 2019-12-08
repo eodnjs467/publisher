@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+body { background-color: #6C6; }
+
+a {
+	color: #333;
+	text-decoration: none;	
+}
+
+nav {
+	width: 150px;
+	margin: 100px auto;	
+}
+
+nav > ul > .btn > a {
+	width: 150px;
+	height: 50px;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	color: #FC3;	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f85032+0,f16f5c+50,f6290c+51,f02f17+71,e73827+100;Red+Gloss+%231 */
+background: #f85032; /* Old browsers */
+background: -moz-linear-gradient(top,  #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
+
+}
+
+nav > ul > .on > a {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f89532+0,f1a55d+50,f6790c+51,f07d18+71,e77a27+100 */
+background: #f89532; /* Old browsers */
+background: -moz-linear-gradient(top,  #f89532 0%, #f1a55d 50%, #f6790c 51%, #f07d18 71%, #e77a27 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f89532 0%,#f1a55d 50%,#f6790c 51%,#f07d18 71%,#e77a27 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f89532 0%,#f1a55d 50%,#f6790c 51%,#f07d18 71%,#e77a27 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f89532', endColorstr='#e77a27',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+nav > ul > .list > ol { background-color: white; }
+
+nav > ul > .list > ol > li { padding: 7px 15px; }
+
+nav > ul > .list { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

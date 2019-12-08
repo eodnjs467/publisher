@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+
+body { background-color: #FC6; overflow: hidden; }
+
+aside {
+	width:100%;
+	height: 120px;
+	background-color: white;
+	position:absolute;
+	bottom: -115px;
+	left: 0;	
+}
+
+aside > div {
+	width: 120px;
+	height: 0;
+	text-align: center;	
+	line-height: 30px;
+	
+	border-bottom: 50px solid white;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	
+	position:absolute;
+	left: 0;
+	right: 0;
+	top: -30px;
+	margin: auto;
+	
+}
+
+a { 
+	text-decoration: none;
+	display: block;
+}
+
+
+</style>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script src="../lib/jquery.easing.1.3.js"></script>
+<script>
+$( function() {
+	var tf=false;
+	$( 'aside > div > a' ).click( function() {
+	
+	
+		tf = !tf;					//tf변수값을 반대로 다시 tf에 담아줌
+		
+		//console.log( tf );
+		if( tf ) {
+			
+			$( 'aside' ).animate( { 'bottom' : '0'  }, 1000, "easeOutExpo" );			
+			$( 'aside > div > a' ).text( '▼' );
+			
+			
+		}else{
+		
+			$( 'aside' ).animate( { 'bottom' : '-115px'  }, 1000, "easeOutExpo" );
+			$( 'aside > div > a' ).text( '▲' );
+			
+		}
+		
+				
+	});
+	
+});
+
+</script>
+</head>
+
+<body>
+
+<aside>
+	<div><a href="#">▲</a></div>
+</aside>
+
+
+</body>
+</html>
+

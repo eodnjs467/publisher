@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+body{ margin: 0; }
+
+html, body, div { height: 100%; }
+
+#box1 { background: url("../images/page1.png") center center; }
+#box2 { background: url("../images/page2.png") center center; }
+#box3 { background: url("../images/page3.png") center center; }
+#box4 { background: url("../images/page4.png") center center; }
+#box5 { background: url("../images/page5.png") center center; }
+</style>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script src="../lib/jquery.easing.1.3.js"></script>
+<script src="../lib/jquery.mousewheel.js"></script>
+<script>
+$( function() {
+	
+	$( window ).mousewheel( function( e, delta ) {
+		
+		//console.log( delta );
+		if( $( 'html, body' ).is( ':animated' ) )	 { return; }
+		
+		if( delta < 0 ) {
+			$( 'html, body' ).animate( 
+				{ 'scrollTop' : '+=' + $(this).height() } ,
+				1000,
+				"easeOutExpo"
+			);
+		}else{
+			$( 'html, body' ).animate(
+				{ 'scrollTop' : '-=' + $(this).height() } ,
+				1000,
+				"easeOutExpo"
+			);	
+		}
+		
+	});
+	
+	//브라우저창의 휠에 의한 스크롤동작을 막아줌
+	$( window ).on( 'mousewheel.disableScroll', function(e) {
+		e.preventDefault();
+		return;
+	});
+	
+});
+
+
+</script>
+
+</head>
+
+<body>
+
+<div id="box1"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+<div id="box4"></div>
+<div id="box5"></div>
+
+</body>
+</html>

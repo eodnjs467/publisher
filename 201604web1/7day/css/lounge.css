@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { font-size: small; }
+
+#wrap {
+	width: 980px;
+	margin: 0 auto;	
+}
+
+#wrap > aside {
+	width: 260px;
+	background: url("../images/cocktail.gif")	 repeat-x;
+	text-align: center;
+	border: 1px solid #099;
+	padding: 10px;	
+	box-sizing: border-box;
+	float: left;
+}
+
+#wrap > aside > h4 { color: red; }
+
+
+#wrap > section {
+	line-height: 24px;	
+	margin-left: 275px;
+}
+
+#wrap > section > h1 { color : #066; }
+
+#wrap > section > #guarantee {
+	background: #696 url("../images/background.gif") no-repeat;
+	padding: 20px 20px 20px 90px;
+	border: 1px dashed white;
+	font-family: Times;
+	font-style: italic; 
+	margin-left: 20px;
+	margin-right: 150px;
+}
+
+footer {
+	text-align: center;
+	padding: 15px;	
+}
+
+
+
+

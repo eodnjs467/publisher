@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+#quick {
+	width: 100px;
+	height: 140px;
+	position: relative;
+	margin: 200px auto;
+	padding: 5px;
+	/*background:#096;	*/
+}
+
+#up_btn, #down_btn {
+	width: 22px;
+	height: 17px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 5px;
+	margin: auto;
+	cursor: pointer;	
+}
+
+#down_btn {
+	bottom: 5px;
+	top: auto;	
+}
+
+#quick > #scroll {
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+	overflow: hidden;
+	/*background: #FC3;*/
+}
+
+#quick > #scroll > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+#quick > #scroll > ul > li {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	padding-top: 10px;
+	box-sizing: border-box;
+}
+
+#quick > #scroll > ul > li > a > img {
+	width: 80px;
+	border: 1px dashed #F66;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

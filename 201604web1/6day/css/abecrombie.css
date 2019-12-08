@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { background-image: url("../images/bgground.jpg"); }
+
+img { 
+	margin-bottom: -4px; 
+	border: 0;
+}
+
+#wrap {
+	width: 961px;
+	margin: 0 auto;	
+	background: #333;
+}
+
+#wrap > #main1 { margin-bottom: 12px; }
+
+#wrap > #main2 > #center_img { 
+	margin-left: 12px; 
+	margin-right: 12px;
+}
+
+
+
+
+
+
+
+
+

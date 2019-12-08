@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+body { margin: 0; }
+
+html, body, div { height: 100%; }
+
+#page1 { background: url("../images/page1.png") center center }
+#page2 { background: url("../images/page2.png") center center }
+#page3 { background: url("../images/page3.png") center center }
+#page4 { background: url("../images/page4.png") center center }
+#page5 { background: url("../images/page5.png") center center }
+
+</style>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script src="../lib/jquery.easing.1.3.js"></script>
+<script>
+$( function() {
+	/*-----------------------------------------------------------------------
+		키보드 이벤트
+		
+		keydown()		-		키보드의 키가 눌려질때 발생하는 이벤트
+		keypress()		-		키보드의 키가 누려서 글자가 입력되어지는 순간 발생하는 이벤트
+		keyup()			-		키보드의 키가 떼어질때 발생하는 이벤트
+		
+		keyCode			-		키보드의 키값
+	-----------------------------------------------------------------------*/
+	
+	$( window ).keydown( function(e) {
+		
+		//console.log( e.keyCode );
+		
+		if( $( 'html, body' ).is( ':animated' ) ) { return; } 
+		
+		var page_h = $( this ).height();
+		
+		if( e.keyCode == 38 ) {
+			
+			$( 'html, body' ).animate( { 'scrollTop' : '-=' + page_h }, 1000, "easeOutExpo" );
+			
+		}else if( e.keyCode == 40 ) {
+			
+			$( 'html, body' ).animate( { 'scrollTop' : '+=' + page_h }, 1000, "easeOutExpo" );
+			
+		}
+		
+	});
+	
+		$( window ).on( 'keydown.disableScroll', function(e) {
+			e.preventDefault();
+			return;
+		} )
+	
+	
+	
+});
+</script>
+</head>
+
+<body>
+
+<div id="page1"></div>
+<div id="page2"></div>
+<div id="page3"></div>
+<div id="page4"></div>
+<div id="page5"></div>
+
+</body>
+</html>
+
+

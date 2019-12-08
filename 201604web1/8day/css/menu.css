@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrap > section > article > #delicious {
+	padding-left: 430px;
+	padding-top: 5px;
+	background: url("../images/menu1.jpg") no-repeat;
+	height: 270px;	
+}
+
+#wrap > section > article > #delicious > span {
+	font-size: 24px;
+	color: #630;
+	margin: 24px 0;
+	display: block;
+	letter-spacing: 5px;	
+}
+
+#wrap > section > article > table {
+	border-top: 1px solid #690;
+	border-left: 1px solid #690;	
+}
+
+#wrap > section > article > table td {
+	width: 33%;
+	border-right: 1px solid #690;
+	border-bottom: 1px solid #690;
+	padding: 7px;	
+}
+
+#wrap > section > article > table h5 { color: #060; }
+
+
+
+
+
+
+
+

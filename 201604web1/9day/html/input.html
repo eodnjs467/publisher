@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+input:checked + label { background: red; }
+</style>
+</head>
+
+<body>
+
+<form method="get" name="form1" action="">
+
+	<fieldset>
+   	<legend>입력폼 연습</legend>
+      
+      <ul>
+      	<li>
+         	<label for="user_id">아이디</label>
+            <input type="text" id="user_id" placeholder="아이디를 입력하시오"/>
+         </li>
+         
+         <li>
+         	<label for="user_pw">비밀번호</label>
+            <input type="password" id="user_pw" placeholder="비밀번호를 입력하시오" />
+            <input type="hidden" id="test" value="넘겨줄 값"/>
+         </li>
+         
+         <li>
+         	<label for="sear">검색창</label>
+            <input type="search" id="sear" />
+         </li>
+         
+         <li>
+         	<label for="tel_num">전화번호</label>
+            <input type="tel" id="tel_num" />
+         </li>
+         
+         <li>
+         	<label for="hp_url">홈페이지 주소</label>
+            <input type="url" id="hp_url" required />
+         </li>
+         
+         <li>
+         	<label for="mail">이메일 주소</label>
+            <input type="email" id="mail" required />
+         </li>
+         
+         <li>
+         	<label for="cnt">수량</label>
+            <input type="number" for="cnt" min="1" max="10" step="2" value="1"/>
+            <input type="range" min="1" max="10" step="1"/>
+            
+            <input type="color" />
+         </li>
+
+			<li>
+         	<input type="checkbox" id="chk1" name="chk"/>
+            <label for="chk1">영화감상</label>
+            
+            <input type="checkbox" id="chk2" name="chk"/>
+            <label for="chk2">독서</label>
+            
+            <input type="checkbox" id="chk3" name="chk"/>
+            <label for="chk3">게임</label>
+            
+         </li>
+         
+         <li>
+         	<input type="radio" id="rdo1" name="rdo" />
+            <label for="rdo1">상</label>
+            
+            <input type="radio" id="rdo2" name="rdo" checked/>
+            <label for="rdo2">중</label>
+            
+            <input type="radio" id="rdo3" name="rdo" />
+            <label for="rdo3">하</label>
+               
+         </li>
+         
+        
+         
+         
+      </ul>
+      
+      <div>
+      	<input type="submit" value="전송" />
+         <input type="reset" value="재작성" />
+         <input type="button" value="버튼" />
+         <input type="file" />
+         <input type="image" src="../images/btn_ok.jpg"/>
+		</div>
+      
+   </fieldset>
+
+
+
+</form>
+
+</body>
+</html>

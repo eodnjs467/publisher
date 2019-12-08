@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+body, ul {
+	margin: 0;
+	padding: 0;	
+}
+
+ul { list-style: none; }
+
+#wrap {
+	width: 964px;
+	margin: 50px auto;	
+}
+
+#wrap > section > article {
+	margin-bottom: 50px;
+	padding-bottom: 50px;	
+}
+
+#coffee, #menu, #coffeehouse {
+	border-bottom: 2px dashed #060;	
+}
+
+h3 { color: #690; }
+h4 { color: #069; }
+
+#btn {
+	width: 120px;
+	position: absolute;
+	top: 50px;
+	margin-left: 50%;
+	left: 490px;	
+	background-color: #eee;
+}
+
+#btn > ul > li {
+	text-align: center;
+	font-size: small;
+	padding: 7px 0	
+}
+
+a {
+	color: #333;
+	text-decoration: none;	
+}
+
+
+
+
+
+
+
+
+
+

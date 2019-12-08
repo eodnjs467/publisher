@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>inline요소 css</title>
+<style>
+
+p { 
+	background-color : #F93; 
+	width: 150px;
+}
+
+#let_space { letter-spacing: 5px; }
+#wo_space { word-spacing: 10px; }
+
+#ws_nowrap { white-space : nowrap; }
+#ws_pre { white-space : pre; }
+
+#txt_indent { text-indent : -20px; }
+
+td {
+	width: 300px;
+	height: 200px;	
+}
+
+#h_left { text-align: left; }
+#h_center { text-align: center; }
+#h_right { text-align: right; }
+
+#v_top { vertical-align: top; }
+#v_mid { vertical-align: middle; }
+#v_bot { vertical-align: bottom; }
+
+#line_h {
+	height: 50px;
+	line-height: 50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<p id="let_space">letter-spacing = 글자 간 간격</p>
+<p id="wo_space">word-spacing = 단어 간 간격</p>
+
+<p>white-space : normal = 기본상태</p>
+<p id="ws_nowrap">white-space : nowrap  = 강제로     한줄로     만듬</p>
+<p id="ws_pre">white-space : pre = 공백을       유지하면서       한줄로      만듬</p>
+
+<p id="txt_indent">text-indent : 양수값 or 음수값 = 양수값 들여쓰기, 음수값 내어쓰기</p>
+
+<p id="line_h">line-height :<br/> 줄 간격</p>
+
+
+<table border="1px" cellpadding="0px" cellspacing="0px">
+
+	<tr>
+    	<th colspan="3">inline 요소의 가로 정렬</th>
+    </tr>
+    
+    <tr>
+    	<td id="h_left">left</td>
+        <td id="h_center">center</td>
+        <td id="h_right">right</td>
+    </tr>
+
+	<tr>
+    	<th colspan="3">inline 요소의 세로 정렬</th>
+    </tr>
+
+	<tr>
+    	<td id="v_top">top</td>
+        <td id="v_mid">middle</td>
+        <td id="v_bot">bottom</td>
+    </tr>
+    
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+#main_vis {
+	width: 1400px;
+	height: 232px;	
+	position: relative;
+	margin: 200px auto;
+	/*border: 2px solid #F00;*/
+	overflow: hidden;
+}
+
+#left_btn, #right_btn {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 30px;
+	margin: auto;	
+	cursor: pointer;
+	z-index: 10;
+}
+
+#right_btn {
+	right: 30px;
+	left: auto;	
+}
+
+#main_vis > ul > li {
+	position: absolute;
+	top: 0;
+	left: 1400px;	
+}
+
+#main_vis > ul > li:first-child { left: 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+

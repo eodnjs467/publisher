@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background: url("../images/iframe_bg.png") center center no-repeat fixed;	
+}
+
+a {
+	color: #333;
+	text-decoration: none;	
+}
+
+#contents {
+	width: 1000px;
+	height: 450px;
+	position:absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;	
+	margin: auto;
+}
+
+#contents > iframe {
+	border: 0;
+	background-color: white;	
+}
+
+#post_it {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	
+	top: -150px;
+	bottom: 0;
+	left: -600px;
+	
+	margin: auto 0;
+	margin-left: 50%;
+	
+	background: url("../images/post_it.png");
+	background-size: cover;
+}
+
+#post_it > ul {
+	list-style: none;
+	padding-left: 10px;
+	transform: rotate( -10deg );	
+}
+
+#post_it > ul > li {
+	padding: 5px;
+	font-size: 12px;
+	font-family:Times;
+	font-style: italic;
+	border-bottom: 1px dashed #F00;
+	margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

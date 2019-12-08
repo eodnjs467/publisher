@@ -1,0 +1,277 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+body {
+	background-image: url( "../images/bg.jpg" );
+	font-size: 12px;	
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+	transition: all 1s ease;	
+}
+
+/*-- section --*/
+
+section {
+	width: 1000px;	
+	height: 900px;
+	margin : 0 auto;
+	/*background: white;*/
+}
+
+#contents1, #contents3 {
+	width: 400px;
+	height: 900px;
+	float: left;
+	/*background:#690;	*/
+}
+
+#contents2 {
+	width: 200px;
+	height: 900px;
+	float: left;
+	background: white;	
+}
+
+/*-- article 공통 --*/
+
+.grid_txt {
+	width: 200px;
+	height: 300px;
+	padding: 15px;
+	box-sizing: border-box;
+	position: relative;
+	background: white;
+	float: left;
+	transition: all 1s ease;	
+}
+
+.grid_txt > ul {
+	list-style: none;
+	margin-top: 20px;	
+}
+
+.grid_txt > ul > li {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 10px;
+}
+
+.grid_txt > .more {
+	width: 46px;	
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	background: #F30;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	transition: all 1s ease;
+}
+
+.grid_txt > .more > a {
+	display: block;
+	color: white;	
+}
+
+.grid_img {
+	width: 200px;
+	height: 300px;
+	background-size: cover;
+	float: left;
+	position:relative;
+	transition: all 1s ease;	
+}
+
+
+#notice > .grid_img  { 
+	background: url("../images/notice_img.png") no-repeat;
+}
+
+.grid_img > .right_arrow {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	border-left: 14px solid #fff;	
+	border-top: 14px solid transparent;
+	border-bottom: 14px solid transparent;
+	transition: all 1s ease;
+}
+
+/*-- notice 애니메이션 --*/
+
+#notice:hover > .grid_txt {
+	background: #f30;
+	color: white;	
+}
+#notice:hover > .grid_txt > ul > li > a { color: white; }
+#notice:hover > .grid_txt > .more { background: white; }
+#notice:hover > .grid_txt > .more > a { color: #f30; }
+
+#notice:hover > .grid_img {
+	background-position: -100px 0px;
+}
+
+#notice:hover > .grid_img > .right_arrow { border-left: 14px solid #f30; }
+
+/*-- magazine 영역 --*/
+
+.grid_txt > p {
+	margin-top: 20px;
+	line-height: 25px;	
+}
+
+#magazine > .grid_img {
+	background: url("../images/w_magazine.png") no-repeat;	
+}
+
+.grid_img > .left_arrow {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 30px;
+	right: 0;
+	border-right: 14px solid #fff;
+	border-top: 14px solid transparent;
+	border-bottom: 14px solid transparent;	
+	transition: all 1s ease;
+}
+
+/*-- w magazine 애니메이션 --*/
+
+#magazine:hover > .grid_txt {
+	background: #f30;
+	color: white;	
+}
+
+#magazine:hover > .grid_txt > .more { background: white; }
+#magazine:hover > .grid_txt > .more > a { color: #f30; }
+
+#magazine:hover > .grid_img {
+	background-position: 0px -100px;	
+}
+#magazine:hover > .grid_img > .left_arrow {  border-right: 14px solid #f30; }
+
+/*-- faq 영역 --*/
+
+#faq > .grid_img {
+	background: url("../images/faq.png") no-repeat;	
+}
+
+/*-- faq 애니메이션 --*/
+
+#faq:hover > .grid_txt {
+	background: #f30;
+	color: white;	
+}
+#faq:hover > .grid_txt > ul > li > a { color: white; }
+#faq:hover > .grid_txt > .more { background: white; }
+#faq:hover > .grid_txt > .more > a { color: #f30; }
+
+#faq:hover > .grid_img { background-position: -100px 0px }
+#faq:hover > .grid_img > .right_arrow { border-left: 14px solid #f30; }
+
+/*-- contents2 영역 --*/
+
+#contents2 > #logo { margin-top: 100px; }
+
+/*-- vision 영역 --*/ 
+
+#vision > .grid_txt > h2 {
+	margin-top: 20px;
+	line-height: 25px;
+}
+
+#vision > .grid_txt > h2 > span { 
+	color: #F30; 
+	transition: all 1s ease;
+}
+
+#vision > .grid_img { background: url("../images/vision.png"); }
+
+/*-- vision 애니메이션 --*/ 
+
+#vision:hover > .grid_txt {
+	background: #f30;
+	color: white;	
+}
+
+#vision:hover > .grid_txt > h2 > span { color: #fc6; }
+#vision:hover > .grid_txt > .more { background: white; }
+#vision:hover > .grid_txt > .more > a { color: #f30; }
+
+#vision:hover > .grid_img { background-position: -100px 0px }
+#vision:hover > .grid_img > .right_arrow { border-left: 14px solid #f30; }
+
+
+/*-- marketing 영역 --*/
+#marketing > .grid_img { background: url("../images/marketing.png"); } 
+/*-- marketing 애니메이션 --*/
+
+#marketing:hover > .grid_txt {
+	background: #f30;
+	color: white;	
+}
+
+#marketing:hover > .grid_txt > .more { background: white; }
+#marketing:hover > .grid_txt > .more > a { color: #f30; }
+
+#marketing:hover > .grid_img {
+	background-position: -100px 0px;	
+}
+#marketing:hover > .grid_img > .left_arrow {  border-right: 14px solid #f30; }
+
+
+/*-- map --*/
+#map >.grid_txt > h1 {
+	font-size: 30px;
+	color: #f30;	
+}
+
+#map > .grid_img { background: url("../images/map.png") 0px -200px; }
+
+/*-- map 애니메이션 --*/
+
+#map:hover >.grid_txt {
+	background: #f30;
+	color: white;	
+}
+
+#map:hover > .grid_txt > h1 { color: white; }
+
+#map:hover > .grid_txt > .more { background: white; }
+#map:hover > .grid_txt > .more > a { color: #f30; }
+
+#map:hover > .grid_img {
+	background-position: 0px 0px;	
+}
+#map:hover > .grid_img > .right_arrow {  border-left: 14px solid #f30; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

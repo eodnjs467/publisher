@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+body { background-color: #333; }
+
+#product {
+	width: 715px;
+	margin: 150px auto;	
+}
+
+#product > div {
+	font-size: 36px;
+	font-weight: bold;
+	padding: 7px 15px;
+	background-image: url("../images/bg.jpg");
+	color: white;	
+}
+
+#main_img { display: block; }
+
+</style>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script>
+$( function() {
+	
+	var hour = 0;				//시
+	var min = 0;				//분
+	var sec = 10;				//초
+	
+	//1초간격으로 deal_timer를 호출
+	var timer = setInterval( deal_timer, 1000 );
+	
+	$( '#product > div' ).text( '남은시간 ' + hour + ' : ' + min + ' : ' + sec );
+	
+	function deal_timer() {
+		sec--;						//1초씩 감소
+		
+		if( sec < 0 ) {
+			min--;					//분값 1감소
+			sec = 59;			//초를 59로 초기화
+		}
+		
+		if( min < 0 ) {
+			hour--;				//시간값 1감소
+			min = 59;			//분 값은 59로 초기화	
+		}
+		
+		$( '#product > div' ).text( '남은시간 ' + hour + ' : ' + min + ' : ' + sec );
+		
+		//시, 분, 초가 모두 0이면( 타이머가 종료되면 )
+		if( hour==0 && min==0 && sec==0 ) {
+				
+				clearInterval( timer );			//setInterval정지
+				alert( "판매가 종료되었습니다." );
+				 
+		}
+		
+		
+	}
+	
+});
+</script>
+</head>
+
+<body>
+
+<div id="product">
+	<img src="../images/product.jpg" id="main_img" alt="상품이미지" />
+	<div>남은시간 0 : 0 : 0</div>
+   <img src="../images/bottom1.gif"/><img src="../images/buy.gif"/>
+</div>
+
+</body>
+</html>

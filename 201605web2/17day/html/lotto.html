@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+body { background-color: #333; }
+
+#number {
+	width: 800px;
+	height: 150px;
+	margin: 200px auto;
+	padding: 50px 0;
+	box-sizing: border-box;
+	background-image: url("../images/background.jpg");	
+}
+
+#number > ul {
+	margin: 0;
+	padding: 0;	
+	list-style: none;
+}
+
+#number > ul > li {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin: 0 20px;
+	padding: 5px;
+	box-sizing: border-box;
+	color: white;
+	font-size: 24px;
+	text-align: center;
+	background: #3CF url("../images/li_bg.png");
+	border-radius: 50%;	
+}
+
+#number > ul > li:last-child { margin-left: 190px; }
+
+</style>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script src="../js/lotto.js"></script>
+</head>
+
+<body>
+
+<div id="number">
+	<ul>
+   	<li class="rnd_num">1</li>
+      <li class="rnd_num">2</li>
+      <li class="rnd_num">3</li>
+      <li class="rnd_num">4</li>
+      <li class="rnd_num">5</li>
+      <li class="rnd_num">6</li>
+      <li class="rnd_num">7</li>
+   </ul>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{ 
+	font-size: 24px;
+	font-family: "맑은 고딕", Arial; 
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	word-break: keep-all;	
+}
+
+a { 
+	color: inherit;
+	text-decoration: none;
+}
+
+/* header */
+header {
+	width: 100%;
+	background: #F60;
+	position: fixed;
+	z-index: 10;	
+}
+
+header > #logo { 
+	width: 5.5rem;
+	float: left; 
+}
+header > #logo > img { width: 100%; }
+
+header > nav {
+	float: right;
+	margin-right: 0.7rem;
+	font-size: 0.7rem;
+	color: white;
+	padding: 0.7rem;	
+}
+
+header > nav > a { padding: 0 0.3rem; }
+
+/* section */
+
+section > article > div {
+	padding: 15% 5%;
+	text-align: center;
+	color: white;	
+	/*background:rgb(102,153,102);*/
+}
+
+section > article > div > h1 {
+	font-size: 3rem;
+	padding-bottom: 3rem;	
+}
+
+section > article > div > h1 > strong {
+	display: block;	
+	border-bottom: 2px solid white;
+}
+section > article > div > h1 > span { font-size: 2.5rem; }
+
+section > article > div > span {
+	font-size: 0.7rem;
+	padding: 0.1rem 0.4rem;
+	background: rgba(255, 255, 255, 0.3);
+	border: 1px solid white;	
+	cursor: pointer;
+}
+
+/* 비쥬얼 이미지 */
+
+section > #dessert { background: #F60; }
+section > #dessert > div { padding-top: 20%; }
+
+section > #canape_vis {
+	padding-top: 10%;
+	background: url("../images/dessert1.jpg") center center no-repeat;
+	background-size: cover;	
+}
+
+section > #honey_vis {
+	padding-top: 10%;
+	background: url("../images/dessert2.jpg") center center no-repeat;
+	background-size: cover;	
+}
+
+section > #pancake_vis {
+	padding-top: 10%;
+	background: url("../images/dessert3.jpg") center center no-repeat;;
+	background-size: cover;	
+}
+
+/* 레시피 영역 */
+
+section > .txt_area > div {
+	color: #036;
+	position:relative;
+	z-index: 2;	
+	padding: 5%;
+}
+
+section > .txt_area > div > h1 { padding: 0.3rem 0; }
+section > .txt_area > div > h1 > strong { font-size: 2.5rem; }
+section > .txt_area > div > h1 > span { font-size: 1.8rem; }
+
+section > .txt_area > div > p {
+	font-size: 0.9rem;
+	padding: 2rem;
+	color: #777;	
+}
+
+section > .txt_area > div > ul {
+	list-style: none;
+	width: 100%;
+	margin-bottom: 2rem;	
+}
+
+section > .txt_area > div > ul > li {
+	display: inline-block;
+	width: 3rem;
+	padding: 0.4rem;	
+}
+
+section > .txt_area > div > ul > li > img { width: 100%; }
+
+section > .txt_area > div > span {
+	font-size: 0.7rem;
+	padding: 0.1rem 0.4rem;
+	border: 1px solid #036;
+	background: rgba(0, 51, 102, 0.2);	
+}
+
+/* footer */
+
+footer {
+	position: relative;
+	padding: 10%;
+	margin-top: 10%;
+	text-align: center;
+	background:#36495a;
+	color: white;
+	z-index: 2;	
+}
+
+footer > span {
+	position: absolute;
+	left: 0;
+	right: 0;	
+	bottom: 0;
+	width: 3rem;
+	color: #36495a;
+	background: white;
+	margin: auto;
+}
+
+footer > span > a {
+	display: block;
+	padding: 0.5rem 0;
+}	
+
+/* 사선 영역 */
+
+section > article:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 0;
+	padding-bottom: 20%;
+	background: white;	
+	
+	transform-origin: 0% 0%;
+	transform: skewY( -10deg );
+}
+
+section > #dessert:after { background: #F60; }
+
+section > #pancake_txt:after {
+	background:#36495a;
+	margin-top: 10%;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

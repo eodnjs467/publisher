@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+
+p {
+	width: 500px;
+	height: 300px;
+	
+	background-color : #63C;	
+	background-image : url("../images/bg.png");
+	
+	background-repeat : no-repeat;
+	/*-------------------------------------
+		no-repeat			반복하지않음
+		repeat-x				x축으로 반복
+		repeat-y				y축으로 반복
+	----------------------------------------*/
+	
+	background-position : 20px -35px ;
+	/*----------------------------------------
+	background-position : x축위치 y축위치
+	
+	background-position-x : x축 위치
+	background-position-y : y축 위치
+	
+	top, right, bottom, center 로 위치값 정의
+	px 위치값을 정의 ( 음수값을 사용하면 백그라운드 영역 밖으로 배치 가능 )	
+	
+	------------------------------------------*/
+}
+
+body { margin: 0; }
+
+#box1 {
+	width: 100%;
+	height: 300px;
+	border: 1px solid #F39;
+	
+	background-image: url("../images/bg2.jpg");	
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	/*------------------------------------------------------------------
+		contain			세로폭에 맞추어 백그라운드 이미지를 맞춤
+		cover				가로폭에 맞추어 백그라운드 이미지를 맞춤
+	--------------------------------------------------------------------*/
+}
+
+</style>
+</head>
+
+<body>
+
+<p>Background</p>
+
+<div id="box1"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+
+</body>
+</html>

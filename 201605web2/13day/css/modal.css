@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+body, ul {
+	margin: 0;
+	padding: 0;	
+}
+
+html, body { height: 100%; }
+
+body {
+	background: url("../images/wood_bg.jpg")	 center center no-repeat fixed;
+	background-size: cover;
+	border: 0 solid black;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+a {
+	color: #333;
+	text-decoration: none;	
+}
+
+#sub_list {
+	width: 800px;
+	height: 350px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	/*background: #09F;	*/
+}
+
+
+#sub_list > ul { list-style: none; }
+
+#sub_list > ul > li {
+	width: 150px;
+	margin: 0 25px;
+	float: left;	
+}
+
+#sub_list > ul > li > .img_box {
+	width: 150px;
+	height: 250px;
+	position: relative;
+	overflow: hidden;	
+}
+
+#sub_list > ul > li > .img_box > img {
+	width: 150px;
+	height: 250px;	
+}
+
+#sub_list > ul > li > .txt_box {
+	padding: 10px;
+	box-sizing: border-box;
+	height: 100px;
+	background: white;
+	font-size: 11px;
+	position:relative;	
+}
+
+#sub_list > ul > li > .txt_box > .txt {
+	position:relative;
+	display: block;
+	line-height: 1.2em;
+	height: 3.6em;
+	overflow: hidden;	
+}
+
+#sub_list > ul > li > .txt_box > .txt:after {
+	content: "...";
+	font-size: 13px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 0 5px 0 50px;	
+	background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,1) 100%);
+background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%);
+background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%,rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+
+}
+
+
+#sub_list > ul > li > .txt_box > .more {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;	
+}
+
+#bg_area {
+	width: 100%;
+	height: 100%;
+	background-color: rgba( 0, 0, 0, 0.7 );
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	opacity: 0;
+	display: none;
+}	
+
+#bg_area > #popup {
+	width: 300px;
+	height: 200px;
+	background: white;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;	
+	font-size: 12px;
+	padding: 50px 15px 10px;
+	transform: scale(0);
+}
+
+#bg_area > #popup > span {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;	
+}
+
+#bg_area > #popup > div {
+	padding: 5px 10px;
+	margin: 7px;
+	float: left;
+	color: white;
+	cursor: pointer;	
+}
+
+#prevBtn { background-color: #F66; }
+#showBtn { background-color: #F93; }
+#nextBtn { background-color: #39F; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

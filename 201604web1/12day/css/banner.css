@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, ul {
+	margin: 0;
+	padding: 0;	
+}
+
+ul { list-style: none; }
+
+img { border: 0; }
+
+body { background: url("../images/tbg.jpg"); }
+
+/*--배너틀--*/
+
+#bnn {
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border: 10px solid #fff;
+	box-shadow: 0 10px 12px rgba(0, 0, 0, 0.7);
+}
+
+/*-- 버튼 영역 --*/
+
+#bnn > input { display: none; }
+
+#bnn > label {
+	width: 14px;
+	height: 14px;
+	position:relative;
+	top: 5px;
+	left: 200px;	
+	display: block;
+	margin-left: 5px;
+	z-index: 10;
+	float: left;
+	background: #CCC;
+	text-indent: -20px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#rdo1:checked + label,
+#rdo2:checked + label,
+#rdo3:checked + label,
+#rdo4:checked + label {
+	background:#F36;	
+}
+
+/*-- 배너영역 --*/
+
+#bnn > #mask {
+	width: 300px;
+	height: 100px;
+	position: absolute;
+	overflow: hidden;	
+}
+
+#bnn > #mask > li {
+	position: absolute;
+	top: 0;
+	left: 300px;	
+}
+
+#rdo1:checked ~ #mask > li:nth-of-type(1),
+#rdo2:checked ~ #mask > li:nth-of-type(2),
+#rdo3:checked ~ #mask > li:nth-of-type(3),
+#rdo4:checked ~ #mask > li:nth-of-type(4) {
+	left: 0;
+	z-index:9;
+	transition: left 0.5s ease;
+	animation: none;
+}
+
+@-webkit-keyframes slide_out {
+	from { left: 0; }
+	to{ left: -300px; }	
+}
+
+input:checked ~ #mask > li {
+	animation: slide_out 0.5s ease;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

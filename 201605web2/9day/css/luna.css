@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+body, ul {
+	margin: 0;
+	padding: 0;	
+}
+
+html, body, #wrap { 
+	height: 100%; 
+	
+}
+
+a { 
+	color: white;
+	text-decoration: none;
+}
+
+/* aside */
+
+#wrap > aside {
+	width: 200px;
+	height: 100%;
+	min-height: 756px;
+	background-color: rgba( 0, 0, 0, 0.8 );
+	position: absolute;
+	z-index: 10;	
+	left: -200px;
+}
+
+#wrap > aside > #menu_btn {
+	width: 50px;
+	height: 50px;
+	background-color: rgba( 0, 0, 0, 0.8 );
+	position: absolute;	
+	left: 200px;
+	top: 50px;
+	cursor: pointer;
+}
+
+#wrap > aside > #menu_btn > .stick {
+	width: 30px;
+	height: 4px;
+	margin: 0 10px;
+	position: absolute;
+	background-color: white;
+}
+
+#wrap > aside > #menu_btn > #t_stick { top: 15px; } 
+#wrap > aside > #menu_btn > #m_stick { top: 24px; } 
+#wrap > aside > #menu_btn > #b_stick { top: 33px; } 
+
+#wrap > aside > #logo {
+	width: 100px;
+	height: 40px;
+	margin: 60px 20px;	
+}
+
+#wrap > aside > nav > ul {
+	padding: 30px;
+	list-style: none;	
+}
+
+#wrap > aside > nav > ul > li { padding: 10px 0; }
+
+#wrap > aside > p {
+	color: white;
+	font-size: 14px;
+	padding: 40px 35px;	
+}
+
+#wrap > aside > #tel { font-size: 22px; }
+
+/* section */
+
+#wrap > section > #top_logo {
+	width: 260px;
+	height: 80px;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	margin: auto;	
+}
+
+#wrap > section > article > video {
+	min-width: 100%;
+	min-height: 100%;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: -1;	
+}
+
+/* footer */
+
+footer {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	position: absolute;
+	bottom: 0;
+	color: white;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

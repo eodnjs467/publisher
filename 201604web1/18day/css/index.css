@@ -1,0 +1,293 @@
+@charset "utf-8";
+/* CSS Document */
+
+html { font-size: 24px; }
+
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+a {
+	color: white;
+	text-decoration: none;	
+}
+
+ul, ol { list-style: none; }
+
+header, section, footer { overflow: hidden; }
+
+/* header */
+
+header {
+	width: 100%;
+	min-width: 1000px;
+	height: 450px;	
+	background: url("../images/header_main.jpg") center center;
+	background-size: cover;
+	position:relative;
+}
+
+header > #logo {
+	position: absolute;
+	top: 30px;
+	left: 30px;	
+}
+
+header > ul {
+	position: absolute;
+	top: 50px;
+	right: 30px;	
+}
+
+header > ul > li {
+	padding: 5px 10px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	float: left;	
+}
+
+header > ul > .line {
+	height: 1.5rem;
+	background: url("../images/list_line.png") center center no-repeat;
+}
+
+header > .center_box {
+	width: 900px;
+	margin: 0 auto;
+	padding-top: 100px;
+	text-align: center;
+	color: white;	
+}
+
+header > .center_box > h1 { font-size: 3rem; }
+
+header > .center_box > h2 { font-size: 1.3rem; }
+
+header > .center_box > p {
+	font-size: 0.8rem;
+	line-height: 2rem;	
+}
+
+header > .center_box > span {
+	padding: 10px 15px;
+	margin-top: 30px;
+	font-size: 0.5rem;
+	font-weight: bold;
+	background: #693;	
+	display: inline-block;
+	cursor: pointer;
+}
+
+.bottom_line {
+	width: 100%;
+	position:absolute;
+	bottom: -1px;
+	height: 30px;	
+}
+
+.bottom_line > li {
+	width: 50%;
+	height: 30px;
+	background: white;
+	position: absolute;
+	transform-origin: 0% 100%;
+	transform: skewX( 30deg );	
+}
+
+.bottom_line > li:nth-child(2) {
+	right: 0;
+	transform: skewX( -30deg );	
+}
+
+/* section */
+section, footer {
+	width: 100%;
+	min-width: 1000px;	
+}
+
+section > #intro {
+	position: relative;
+	padding-bottom: 100px;	
+}
+
+section > #intro > ul {
+	width: 900px;
+	margin: 0 auto;
+}
+
+section > #intro > ul > li {
+	width: 250px;
+	padding: 25px;	
+	text-align: center;
+	float: left;
+}
+
+section > #intro > ul:after {
+	content: "";
+	display: block;
+	clear: both;	
+}
+
+section > #intro > ul > li > h1 {
+	font-size: 1rem;
+	height: 2rem;
+}
+
+section > #intro > ul > li > h2 {
+	font-size: 0.7rem;
+	height: 3rem;
+	color: #363;	
+}
+
+section > #intro > ul > li > p {
+	font-size: 0.5rem;
+	text-align: left;
+	color: #333;	
+}
+
+section > #intro > .bottom_line > li { background: #690; }
+
+section> #intro > ul > li:nth-child(2) {
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	width: 247px;
+}
+
+/* art */
+
+section > #art {
+	position: relative;
+	text-align: center;
+	background: #690;
+	color: white;	
+}
+
+section > #art {
+	padding-top: 50px;
+	padding-bottom: 100px;	
+}
+
+section > #art > h1 { font-size: 1.3rem; }
+section > #art > h2 {
+	font-size: 4rem;
+	color: #FC3;	
+}
+section > #art > p { font-size: 0.8rem; }
+
+/* nature */
+section > #nature {
+	position:relative;
+	padding-top: 50px;
+	padding-bottom: 100px;	
+}
+
+section > #nature > h1 {
+	font-size: 1.5rem;
+	text-align: center;	
+}
+
+section > #nature > h2 {
+	font-size: 2.5rem;
+	text-align: center;	
+	padding-bottom: 2rem;
+	color: #063;
+}
+
+section > #nature > div {
+	width: 900px;
+	margin: 0 auto;
+	color: #666;
+	font-size: 0.7rem;
+	
+	-webkit-column-count: 3;
+	-webkit-column-gap: 25px;
+	-webkit-column-rule: 1px solid #690;	
+}
+
+section > #nature > div > p {
+	margin-bottom: 0.8rem;	
+}
+
+section > #nature > div > p:first-letter {
+	font-size: 1.4rem;
+	color: #396;
+	float: left;
+	padding: 0 5px;	
+}
+
+section > #nature > .bottom_line > li { background: #333; }
+
+/* footer */
+
+footer { background: #333; }
+
+footer > #info {
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+	color: white;
+	font-size: 0.5rem;
+	font-weight: bold;
+	padding: 15px 0;
+	line-height: 1rem;	
+}
+
+footer > #info > p { float: left; }
+
+footer > #info > ul {
+	height: 56px;
+	float: right;
+	padding: 5px;
+}
+
+footer > #info > ul > li { float: left; }
+
+footer > #info:after {
+	content: "";
+	display: block;
+	clear: both;	
+}
+
+footer > #copy { background: #690; }
+
+footer > #copy > p {
+	width: 900px;
+	margin: 0 auto;
+	padding: 15px 0;
+	font-size: 0.5rem;
+	font-weight: bold;
+	line-height: 1rem;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

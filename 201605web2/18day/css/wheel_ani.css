@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	background-color: #69F;	
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+#main_vis {
+	width:	1200px;
+	height: 900px;
+	margin: 0 auto;
+	position:relative;
+	background: white;
+	overflow: hidden;
+}
+
+#back {
+	width: 3600px;
+	position: absolute;
+	z-index: 0;	
+}
+
+#front {
+	width: 3600px;
+	position:absolute;
+	z-index: 1;	
+}
+
+#back > li, 
+#front >li {
+	width: 1200px;
+	height: 900px;
+	float: left;	
+}
+
+#camera {
+	width: 	311px;
+	height: 155px;
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	right: 0;
+	top: 450px;
+	margin: auto;
+}

@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { font-size: small; }
+
+#wrap {
+	width: 964px;
+	margin: 0 auto;	
+}
+
+#wrap > header { text-align: right; }
+
+#wrap > section > h3 { color: #690; }
+
+#wrap > section > h4 { color: #066; }

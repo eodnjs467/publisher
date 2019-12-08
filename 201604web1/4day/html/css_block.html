@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+
+p {
+	width: 10px;
+	height: 0;
+	border-left: 20px solid #F00;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	/*--------------------------------------------------------------------------------
+	
+		border-width					-		선의 두께
+		
+		border-style						-		선의 모양
+													solid		=		실선
+													dotted	=		점선
+													dashed	=		절단선
+													double	=		이중 실선
+		
+		border-color					-		선의 색상
+	
+		border : 두께 모양 색상;
+	
+		border-top				-		상단 선
+		border-right			-		우측 선
+		border-bottom			-		하단 선
+		border-left				-		좌측 선
+		
+	-----------------------------------------------------------------------------------
+	
+		margin	-	외곽선을 기준으로 바깥여백
+		padding	-	외곽선을 기준으로 안쪽여백
+		
+		margin-top : 10px					padding-top : 10px
+		margin-right : 10px				padding-right : 10px
+		margin-bottom : 10px			padding-bottom : 10px
+		margin-left : 10px					padding-left : 10px;
+		
+		margin : 10px;						-		모든 방향에 10px만큼 바깥 여백
+		padding : 10px;					-		모든 방향에 10px만큼 안쪽 여백
+		
+		margin : 10px 20px;				-		위,아래에 10px 양옆 20px 바깥 여백
+		padding : 10px 20px;				-		위,아래에 10px 양옆 20px 안쪽 여백
+		
+		margin : 10px 20px 30px;		-		위 10px 양옆 20px 아래 30px 바깥 여백	
+		padding: 10px 20px 30px;		-		위 10px 양옆 20px 아래 30px 안쪽 여백	
+		
+		margin : 10px 20px 30px 40px;	-	위 10px 오른쪽 20px 아래 30px 왼쪽 40px 
+														바깥 여백	
+		padding : 10px 20px 30px 40px;	-	위 10px 오른쪽 20px 아래 30px 왼쪽 40px 
+														안쪽 여백	
+		
+	---------------------------------------------------------------------------------*/	
+}
+
+div {
+	width: 300px;
+	height: 300px;
+	background: #ccc; 
+	padding : 30px;
+	/*-----------------------------------------------------------------
+		box-sizing: border-box;	
+		
+		-border나 padding에 의해 크기 늘어나는 부분을
+		지정한 width값 , height값만큼으로 크기를 잡아준다.
+	-------------------------------------------------------------------*/
+	box-sizing: border-box;			
+/*	border-bottom: 30px solid #06C;	
+	border-right: 30px solid transparent; */
+}
+
+table {
+	margin-top: 50px;
+	border-top: 1px solid #f00;
+	border-left: 1px solid #f00;
+}
+
+table th {
+	border-right: 1px solid #00F;
+	border-bottom: 1px solid #00F;
+	width: 100px;
+	height: 50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<p></p>
+
+<div>block</div>
+
+<table border="0px" cellpadding="0px" cellspacing="0px">
+
+	<tr>
+    	<th>block1</th>
+        <th>block2</th>
+        <th>block3</th>
+        <th>block4</th>
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>

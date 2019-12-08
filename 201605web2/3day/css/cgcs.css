@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+
+a {
+	color: #666;
+	text-decoration: none;	
+}
+
+#wrap {
+	width: 980px;
+	height: 755px;
+	margin: 0 auto;
+	padding: 10px;
+	box-sizing: border-box;
+	background: url("../images/cgcs_bg.jpg");
+}
+
+#wrap > header > nav {
+	width: 520px;	
+	margin: 15px auto;
+}
+
+#wrap > header > nav > ul > li {
+	width: 130px;
+	text-align: center;
+	float: left;	
+}
+
+#wrap > header > nav > ul:after {
+	content:"";	
+	display: block;
+	clear: both;
+}
+
+#wrap > header > nav > ul > li > a {
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+	display: block;	
+}
+
+#wrap > header > nav > ul > li > ol {
+	height: 150px;
+	padding: 10px;
+	box-sizing: border-box;
+	display: none;	
+}
+
+#wrap > header > nav > ul > li > ol > li {
+	padding: 7px 0;
+	font-size: 11px;
+	border-top: 1px solid #630;	
+}
+
+#wrap > header > nav > ul > li > ol > li:last-child {
+	border-bottom: 1px solid #630;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

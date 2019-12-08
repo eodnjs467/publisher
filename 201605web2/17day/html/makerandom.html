@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script>
+/*----------------------------------------------------------------------------------------
+	Math.random()	* 1				->		0~1 사이의 난수 발생		0~0.99999999999999999999...
+	
+	Math.random() * 10				->		0~9.9999999999999999999999....
+	
+	Math.floor( Math.random() * 10 + 1 )		->		1~10
+	
+		
+	function 범위랜덤함수이름( min, max ) {
+		var rand = Math.random() * ( max - min ) + min;
+		return Math.round( rand )	
+	}
+
+-----------------------------------------------------------------------------------------*/
+
+	function makeRandom( min, max ) {
+		var rand = Math.random() * ( max - min ) + min;
+		return Math.round( rand );	
+	}
+
+
+	console.log( makeRandom( 5, 8 ) );
+
+
+</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

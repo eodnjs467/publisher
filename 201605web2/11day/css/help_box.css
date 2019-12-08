@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+body, ul {
+	margin: 0;
+	padding: 0;	
+}
+
+ul { list-style: none; } 
+
+#list {
+	width: 900px;
+	margin: 200px auto;
+	background: #036;
+}
+
+#list > ul > li {
+	width: 240px;
+	padding: 10px;
+	margin: 20px;
+	float: left;	
+}
+
+#list > ul > li > h4 {
+	padding-bottom: 5px;
+	border-bottom: 2px solid #09F;	
+}
+
+#list > ul > li > div { display: none; }
+
+#help_box {
+	width: 180px;
+	padding: 10px;
+	border: 1px solid #F36;
+	background-color: white;
+	position: absolute;	
+	display: none;
+}
+
+#help_box > h4 {
+	color: red;
+	padding-bottom: 5px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #F36;
+}
+
+#help_box > p {
+	font-size: small;
+	color: #333;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

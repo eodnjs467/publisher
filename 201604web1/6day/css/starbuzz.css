@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { background-image: url("../images/background2.gif"); }
+
+#wrap {
+	width: 800px;
+	margin: 0 auto;	
+}
+
+/*-- header --*/
+#wrap > header { 
+	background-color: #685d48; 
+	margin-bottom: 15px;
+}
+
+/*-- aside --*/
+#wrap > aside {
+	width: 300px;
+	text-align: center;
+	background-image: url("../images/background.gif");
+	padding: 10px 40px;
+	box-sizing: border-box;
+	float: right;	
+}
+
+#wrap > aside > h4 { line-height: 26px; }
+#wrap > aside > h4 > span { color: #662315; }
+#wrap > aside > p { text-align: left; }
+
+/*-- section --*/
+section {
+	background: url("../images/background.gif"); 
+	padding: 15px;
+	margin-right: 315px;	
+}
+
+section > h2 { color: #662315; }
+
+section > p > a {
+	color: #F66;
+	text-decoration: none;
+	border-bottom: 2px dotted #F66;
+}	
+
+/*-- footer --*/
+
+footer { 
+	background: #685d48;
+	color: #F3E6B6;
+	text-align: center;
+	padding: 15px 10px;
+	margin-top: 15px;
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

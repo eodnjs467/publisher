@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+function bgChange( bgcolor ) {
+	document.getElementsByTagName( 'body' )[0].style.backgroundColor = bgcolor;
+}
+</script>
+</head>
+
+<body>
+
+<select onChange="bgChange( this.value )">
+	<option value="white">흰색</option>
+   <option value="red">빨강</option>
+   <option value="pink">분홍</option>
+   <option value="orange">주황</option>
+   <option value="green">녹색</option>
+   <option value="cyan">하늘</option>
+</select>
+
+</body>
+</html>
