@@ -1,0 +1,186 @@
+1) 10번 부서에 속한 사람들(DEPTNO)에게 급여(SAL) 13%를 보너스로 지불하기로 했다. 이름(ENAME), 급여(SAL), 보너스 금액, 부서 번호(DEPTNO) 출력
+
+SELECT ENAME, SAL, SAL*0.13 AS BONUS, DEPTNO
+  FROM EMP
+ WHERE DEPTNO = 10;
+
+2) 10번, 30번 부서(DEPTNO)의 연봉을 계산하여 이름(ENAME), 부서번호(DEPTNO), 급여(SAL), 연봉 출력 (연말에 급여 150% 보너스 지급이 있다)
+
+SELECT ENAME, DEPTNO, SAL, SAL*12 + SAL*1.5 AS ANNSAL
+  FROM EMP
+ WHERE DEPTNO IN (10, 30);
+
+3) 입사일(HIREDATE)부터 지금까지의 날짜수를 출력. 부서번호(DEPTNO), 이름(ENAME), 입사일(HIREDATE), 현재일, 근무일수(소수점 이하 절삭), 근무 년수(365일 기준), 근무월수(30.4일 기준), 근무 주수(7일 기준) 출력
+
+SELECT DEPTNO, ENAME, HIREDATE, SYSDATE,
+       TRUNC(SYSDATE-HIREDATE) AS WORKDAY,
+       TRUNC((SYSDATE-HIREDATE)/365) AS WORKYEAR,
+       TRUNC((SYSDATE-HIREDATE)/30.4) AS WORKMONTH,
+       TRUNC((SYSDATE-HIREDATE)/7) AS WORKWEEK
+  FROM EMP;
+
+4) 입사일(HIREDATE)로부터 90일이 지난 후의 사원 이름(ENAME), 입사일(HIREDATE), 90일 후의 날, 급여(SAL)를 출력
+
+SELECT ENAME, HIREDATE, HIREDATE + 90, SAL
+  FROM EMP;
+
+5) 사원의 입사 60일이 지난 후의 첫 월요일이 몇 년, 몇 월, 몇 일(2012/06/16) 인지를 구하여 이름(ENAME), 입사일(HIREDATE), 첫 월요일 날짜를 출력
+
+SELECT ENAME, HIREDATE, NEXT_DAY((HIREDATE+60), '월') AS FIRSTMON
+  FROM EMP;
+
+6) 입사일(HIREDATE)을 'XXXX년 XX월 XX일' 형식으로 이름(ENAME), 입사일 출력
+
+SELECT ENAME, HIREDATE,
+    -- TO_CHAR(HIREDATE, 'YYYY년 MM월 DD일') AS HIREDATE2 
+       TO_CHAR(HIREDATE, 'YYYY"년" MM"월" DD"일"') AS HIREDATE2,
+       TO_CHAR(HIREDATE, 'YYYY') || '년 ' ||
+       TO_CHAR(HIREDATE, 'MM')   || '월 ' ||
+       TO_CHAR(HIREDATE, 'DD')   || '일 ' AS HIREDATE3
+  FROM EMP;
+
+7) 10번 부서(DEPTNO) 월급(SAL)의 평균, 최고, 최저, 인원수를 구하여 출력
+
+SELECT AVG(SAL), MAX(SAL), MIN(SAL), COUNT(*)
+  FROM EMP
+ WHERE DEPTNO = 10;
+
+8) 이름이 'ALLEN'인 사원의 부서명(DNAME)을 출력. 이름(ENAME), 사원번호(EMPNO), 부서번호(DEPTNO), 부서명(DNAME) 출력
+
+SELECT E.ENAME, E.EMPNO, D.DEPTNO, D.DNAME
+  FROM EMP E, DEPT D
+ WHERE E.DEPTNO = D.DEPTNO
+   AND ENAME = 'ALLEN';
+
+9) EMP, DEPT 테이블을 조인하여 EMP의 모든 컬럼, DEPT의 모든컬럼을 조회 (데카르트 곱을 피할 것)
+
+-- 바로 데이터를 직접 확인해야할때
+SELECT *
+  FROM EMP E, DEPT D
+ WHERE E.DEPTNO = D.DEPTNO;
+
+-- 프로그래밍 소스 안에 SQL을 넣을때는 위에처럼 절대 하면 안된다.
+SELECT E.EMPNO, E.ENAME, E.JOB, E.MGR, E.HIREDATE, E.SAL,
+       E.COMM, E.DEPTNO, D.DNAME, D.LOC
+  FROM EMP E, DEPT D
+ WHERE E.DEPTNO = D.DEPTNO;
+
+
+10) 사원 중 상급자가 존재하지 않으면 상급자번호를 0000 으로, 있을 경우 앞의 두자리가 79 일 경우 9999로, 76일 경우 6666, 78 일 경우 8888, 75 일 경우 7555, 77일 경우 7777 로 표시되도록 하고,
+- 급여는 10단위에서 반올림을 한 후 연봉으로 계산 (연말에 급여 200% 보너스 지급이 있고, 수당도 합산)
+- 수당의 경우 존재 하지 않는다면 0 으로 나오도록 조회
+
+
+SELECT EMPNO, MGR, 
+       CASE 
+          WHEN MGR IS NULL THEN '0000'
+	  WHEN SUBSTR(MGR, 1, 2) = '79' THEN '9999'
+          WHEN SUBSTR(MGR, 1, 2) = '78' THEN '8888'
+          WHEN SUBSTR(MGR, 1, 2) = '77' THEN '7777'
+          WHEN SUBSTR(MGR, 1, 2) = '76' THEN '6666'
+          WHEN SUBSTR(MGR, 1, 2) = '75' THEN '5555'
+	  ELSE TO_CHAR(MGR)
+       END AS MGRNO,
+       SAL, COMM,
+       ROUND(SAL, -2) * 12 + NVL(COMM, 0) + SAL * 2 AS ANNSAL
+  FROM EMP;
+
+---------------------------------------------------------------
+
+DESC SALGRADE;
+
+SALGRADE 테이블 - 급여 등급 테이블
+
+GRADE : 급여 등급
+LOSAL : 해당 급여 등급의 최소 급여
+HISAL : 해당 급여 등급의 최고 급여
+
+SELECT *
+  FROM EMP E, SALGRADE S
+
+SELECT E.ENAME, E.SAL, S.GRADE, S.LOSAL, S.HISAL
+  FROM EMP E, SALGRADE S
+ WHERE E.SAL <= S.HISAL 
+   AND E.SAL >= S.LOSAL;
+
+SELECT E.ENAME, E.SAL, S.GRADE, S.LOSAL, S.HISAL
+  FROM EMP E, SALGRADE S
+ WHERE E.SAL BETWEEN S.LOSAL AND S.HISAL;
+
+SELECT E.ENAME, E.MGR, C.EMPNO, C.ENAME
+  FROM EMP E, EMP C
+ WHERE E.MGR = C.EMPNO;
+
+####################################################
+아우터 조인 (OUTER JOIN) - 면접 때 물어볼만한 JOIN
+
+테이블들을 조인해서 SELECT 할때
+조인조건에 해당하는 컬럼의 값이 NULL 이면,
+해당 로우는 출력되지 않는다.
+
+그런데, 이 컬럼값이 NULL이어도 
+다른 조인되는 테이블의 로우를 비워둔 상태로
+출력하고자 할 경우 아우터 조인을 쓴다.
+####################################################
+
+SELECT E.ENAME, E.MGR, C.EMPNO, C.ENAME
+  FROM EMP E, EMP C
+ WHERE E.MGR(+) = C.EMPNO;
+
+SELECT E.ENAME, E.MGR, C.EMPNO, C.ENAME
+  FROM EMP E, EMP C
+ WHERE E.MGR = C.EMPNO(+);
+
+SELECT E.EMPNO, E.SAL, D.DEPTNO, D.DNAME, 
+       S.GRADE, S.LOSAL, S.HISAL
+  FROM EMP E, DEPT D, SALGRADE S
+ WHERE E.DEPTNO = D.DEPTNO
+   AND E.SAL BETWEEN S.LOSAL AND S.HISAL;
+
+
+SQL99
+
+CROSS JOIN : WHERE조건 안준 방식과 동일하다
+-> 안 쓴다.
+
+NATURAL JOIN : 
+조인 대상의 테이블들이 똑같은 이름의 컬럼을 가지고 있을때
+그 컬럼으로 EQUI-JOIN 해주는 조인 방식
+
+SELECT E.ENAME, D.DNAME, DEPTNO
+  FROM EMP E NATURAL JOIN DEPT D;
+
+-> NATURAL JOIN은 조인 대상 테이블들이
+  동일한 이름의 컬럼이 존재하지 않으면 사용불가
+  동일한 이름의 컬럼이 여러개일때도 사용불가
+
+TABLE1 : JNO ,  TABLE2 : JUMINNO
+
+
+JOIN ~ USING
+-> 조인대상 테이블들이 가진 동일한 이름의 컬럼이 여러개일때,
+  조인조건으로 사용할 컬럼을 직접 지정하는 방식
+
+SELECT E.ENAME, D.DNAME, DEPTNO
+  FROM EMP E JOIN DEPT D USING (DEPTNO);
+
+
+JOIN ~ ON
+-> 조인대상 테이블들의 조인 기준 컬럼이, 이름이 다를때
+  조인조건으로 사용할 컬럼들은 조건식으로 직접 명시하는 방식
+-> 가장 많은 JOIN 케이스를 커버
+
+SELECT E.ENAME, D.DNAME
+  FROM EMP E JOIN DEPT D ON ( E.DEPTNO = D.DEPTNO );
+
+
+OUTER JOIN
+
+SELECT E.EMPNO, E.ENAME, E.MGR, D.DNAME
+  FROM EMP E LEFT OUTER JOIN DEPT D ON E.DEPTNO = D.DEPTNO;
+
+SELECT E.EMPNO, E.ENAME, E.MGR, D.DNAME
+  FROM EMP E RIGHT OUTER JOIN DEPT D ON E.DEPTNO = D.DEPTNO;
+
+SELECT E.EMPNO, E.ENAME, E.MGR, D.DNAME
+  FROM EMP E FULL OUTER JOIN DEPT D ON E.DEPTNO = D.DEPTNO;
