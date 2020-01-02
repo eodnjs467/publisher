@@ -1,0 +1,89 @@
+12장 커스텀 태그는 패스
+- 안합니다
+-> 한번 읽어는 보세요!
+
+-----------------------------------------------------------
+
+13장 JSTL
+- JSP Standard Tag Library
+-> 취업하시고, 실무투입하셔서 JSP 파일을 쓰는 프로젝트라면
+   쓸 확률이 매우 높다.
+
+- 자바 코드를 줄이고,
+  태그로 자바 코드로 수행할 수 있는 기능을 제공
+
+https://jstl.java.net
+
+- [Download] 에서 다운로드 받아야하는데!
+-> 공식사이트 다운로드 링크가 죽었다!
+
+그래서 29일차 강의폴더에 예전에 받아놓은거 복사해뒀음!
+
+-----------------------------------------------------------
+
+JSTL 라이브러리의 종류
+
+core: 우리는 코어 태그만 배웠다
+
+-----------------------------------------------------------
+
+JSTL core에서 꼭 반드시 기억해야태그
+
+set, if, choose, forEach
+
+p.550 coreForEachTag.jsp 는 들고 다니자
+
+-----------------------------------------------------------
+
+hashMap.put("name", "okjsp");
+hashMap.put("web", "http://www.okjsp.net");
+hashMap.put("ename", "scott");
+hashMap.put("deptno", "10");
+hashMap.put("sal", "3000");
+hashMap.put("hiredate", "1993/12/25");
+
+<xml>
+	<name>okjsp</name>
+	<web>http://www.okjsp.net</web>
+	.
+	.
+	.
+</xml>
+
+JSON
+{"name":"okjsp", "web":"http://www.okjsp.net", . . .}
+
+name    web     ename    deptno . . .   
+-------------------------------
+okjsp  http..   scott    10     . . .
+
+
+okjsp|www.okjsp.net|scott|10|3000|1993/12/25
+okjsp|www.okjsp.net|scott|10|3000|1993/12/25
+okjsp|www.okjsp.net|scott|10|3000|1993/12/25
+okjsp|www.okjsp.net|scott|10|3000|1993/12/25
+okjsp|www.okjsp.net|scott|10|3000|1993/12/25
+okjsp|www.okjsp.net|scott|10|3000|1993/12/25
+
+------------------------------------------------------------
+
+JSP의 기본 문법이 모두 끝났습니다.
+
+- 서블릿 / JSP 차이
+-> 서블릿이 어떻게 동작하는지 (get / post)
+
+- JSP 내장객체
+-> request, response, pagContext, sesssion, application
+
+- 쿠키, 세션처리
+
+- JDBC
+-> 프로그래밍 절차를 아예 다 외우고 있어야된다.
+-> 면접용 커넥션 풀
+
+- EL, JSTL 앙상블
+-> 액션태그
+
+
+
+

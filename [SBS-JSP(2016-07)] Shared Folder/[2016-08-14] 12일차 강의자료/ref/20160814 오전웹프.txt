@@ -1,0 +1,239 @@
+1) 이름(ENAME)이 5자 이상이고, 6자는 아닌 사원들의
+이름(ENAME)과 
+
+사원번호(EMPNO)를 두 번째 자리까지는 숫자 그대로 나오도록 하고,
+나머지 두 자리는 '**' 로 표현되게 출력
+
+성공했다면, 이름(ENAME) 과 이름의 
+첫 글자만 나타내고 나머지부분은 '*' 로 출력되도록 출력해보자. 
+
+단, 첫 글자와 '*' 로 치환된 문자의 개수는 본래 이름의 개수와 완전히 동일해야 한다.
+
+SELECT EMPNO							, 
+       SUBSTR(EMPNO,1,2)||'**'			    AS EMPNO_2	,
+       RPAD( SUBSTR(EMPNO,1,2), LENGTH(EMPNO), '*') AS EMPNO_3	,
+       RPAD( SUBSTR(ENAME,1,1), LENGTH(ENAME), '*') AS ENAME_2
+  FROM EMP
+ WHERE LENGTH(ENAME) >= 5
+   AND LENGTH(ENAME) <> 6;
+
+--------------------------------------------------------------------
+
+2) 이름(ENAME)에 'S'를 포함하고 있고, 
+'X'는 포함하지 않은 사원 중,
+
+수당(COMM)이 존재하거나, 존재하지 않더라도
+급여(SAL)가 3000 이상인 사원의 정보를 조회하라.
+
+사원번호(EMPNO)는 앞의 두자리만 출력하고,
+이름(ENAME)과, 직무(JOB)와, 급여(SAL)를 출력할 것
+
+SELECT SUBSTR(EMPNO, 1, 2) AS EMPNO,
+       ENAME, JOB, SAL
+  FROM EMP
+ WHERE ENAME LIKE '%S%'
+   AND ENAME NOT LIKE '%X%'
+   AND SAL >= 3000
+
+SELECT SUBSTR(EMPNO, 1, 2) AS EMPNO,
+       ENAME, JOB, SAL
+  FROM EMP
+ WHERE INSTR(ENAME,'S') > 0
+   AND INSTR(ENAME,'X') = 0
+   AND SAL >= 3000
+
+--------------------------------------------------------------------
+
+3) 급여(SAL)가 2000~5000 사이거나,
+상급자 사원번호 (MGR)의 끝자리가 8,9,6 인 사원중,
+부서번호(DEPTNO)가 20, 30인 사원을 조회하라.
+
+사원의 이름은 대문자, 소문자, 첫 글자만 대문자로 각각 나누어서 조회. 
+또한 직무(JOB)은 첫글자만 나오게 출력
+
+SELECT ENAME, UPPER(ENAME), LOWER(ENAME), INITCAP(ENAME),
+       SUBSTR(JOB,1,1) AS JOB
+  FROM EMP
+ WHERE (SAL BETWEEN 2000 AND 5000
+    OR SUBSTR(MGR, LENGTH(MGR)) IN (8, 9, 6))
+ --    SUBSTR(MGR, LENGTH(MGR)) = 8
+ -- OR SUBSTR(MGR, LENGTH(MGR)) = 9
+ -- OR SUBSTR(MGR, LENGTH(MGR)) = 6
+   AND DEPTNO IN (20, 30);
+
+--------------------------------------------------------------------
+
+4) 근속년수가 만으로 30년이 안된 사원의 
+시급, 일급과 해당 사원의 정직원이 된 날짜 및,
+근속년수가 정확히 만 30년이 되는 날짜를 출력하라.
+
+- 월 평균 근속일수는 21.5일로 한다.
+- 일급의 경우 소수점 세 번째 자리 이하는 버림 처리 한다.
+- 하루 평균 근무시갂은 점심시갂을 제외한 8시간으로 한다.
+- 시급이 소수점으로 표시될 경우, 두 번째 소수점에서 반올림한다.
+- EMP Table에 나온 사원들은 입사일기준 6개월갂의 인턴을 거친 후 , 정직원으로 조정됨을 원칙으로 한다.
+
+SELECT ROUND(SAL / 21.5 / 8, 1) AS TIME_PAY,
+       TRUNC(SAL / 21.5, 2) AS DAY_PAY,
+       ADD_MONTHS(HIREDATE, 6) AS JUNGJIKWON_DAY,
+       ADD_MONTHS(HIREDATE, 30) AS WORK_30Y
+  FROM EMP
+ WHERE MONTHS_BETWEEN(SYSDATE, HIREDATE) < 360;
+ 
+    -- ADD_MONTHS(HIREDATE, 360) > SYSDATE
+
+--------------------------------------------------------------------
+
+
+SELECT ENAME, SAL
+  FROM EMP
+ WHERE DEPTNO = 10;
+
+SELECT ENAME, SAL
+  FROM EMP
+ WHERE DEPTNO = '10';
+
+SELECT SYSDATE - HIREDATE
+  FROM EMP;
+
+SELECT SYSDATE - '84/10/01'
+  FROM EMP;
+
+SELECT SYSDATE - TO_DATE('1984/10/01', 'YYYY/MM/DD')
+  FROM DUAL;
+
+SELECT TO_CHAR(SYSDATE, 'CC YYYY/MM/DD:HH24:MI:SS')
+  FROM DUAL;
+
+실무에서 사용하는 데이터에서는
+DATE 타입으로 저장하는 경우가 별로 없다.
+
+그냥 날짜를 문자열 데이터로 저장한다!
+-> 자바에서 String으로 받아오기가 편하기 때문에 
+   (게으른 프로그래머들)
+
+게시판 테이블
+-------------------------------------------------
+글번호   글제목   작성자    글쓴날짜   글쓴시간
+-------------------------------------------------
+00001    냉무     홍길동    '20160814'  '111356'
+-------------------------------------------------
+
+String writeDate = get.WriteDate();
+
+SELECT ENAME,
+       TO_CHAR(SAL, '$999,999.99'),
+       TO_CHAR(SAL, 'L999,999.99')
+  FROM EMP;
+
+
+- 숫자형 <-> 문자형 변환은 사용할일이 거의 없다
+
+- 문자형 <-> 날짜형 변환은 굉장히 자주 사용한다.
+-> TO_CHAR(), TO_DATE() 반드시 사용법까지 기억하자
+
+SELECT ENAME, SAL*12 + NVL(COMM, 0), COMM
+  FROM EMP;
+
+SELECT NVL2(COMM, 1, 0), NVL(COMM,0), COMM
+  FROM EMP;
+
+SELECT ENAME, JOB, SAL,
+       DECODE(JOB, 'MANAGER', SAL*1.1,
+                   'CLERK',   SAL*1.05,
+		   SAL) AS UPSAL
+  FROM EMP;
+
+SELECT ENAME, JOB, SAL,
+       DECODE(JOB, 'MANAGER', SAL*1.1,
+                   'CLERK',   SAL*1.05,
+		   SAL) AS UPSAL,
+       CASE JOB
+           WHEN 'MANAGER' THEN SAL*1.1
+	   WHEN 'CLERK'   THEN SAL*1.05
+	   ELSE SAL
+       END AS UPSAL2
+  FROM EMP;
+
+---------------------------------------------------------------
+숙제!
+- DECODE, CASE
+-> 요 둘중에 하나는 오라클에서밖에 사용이 안된다
+-> 나머지 하나는 SQL 표준이라서 다른 DB에서도 사용이 가능하다
+---------------------------------------------------------------
+
+SELECT ENAME, SAL,
+       CASE
+          WHEN SAL >= 3000 THEN 'O'
+	  ELSE 'X'
+        END AS OVER_3000
+  FROM EMP;
+
+단일행 함수 (Single Row Function)
+- 한개 한개 로우가 입력되어
+  하나의 로우로 결과가 나오는 함수
+-> 출력되는 로우수는 최초 로우수랑 동일
+
+복수행 함수 (Multiple Row Function)
+- 여러개 로우가 입력되어
+  하나의 행으로 결과가 나오는 함수
+-> 결과로 출력되는 로우수는 단 하나
+
+SELECT COUNT(*)
+  FROM EMP
+ WHERE DEPTNO = 20;
+
+SELECT SUM(SAL), AVG(SAL), MAX(SAL), MIN(SAL)
+  FROM EMP;
+
+---------------------------------------------------------------
+
+SELECT ENAME, DNAME
+  FROM EMP, DEPT
+ORDER BY ENAME;
+
+SELECT ENAME, DNAME
+  FROM EMP, DEPT
+ WHERE EMP.DEPTNO = DEPT.DEPTNO;
+
+
+두 개 이상의 테이블을 양옆에 붙여서 조회하는 방식은
+JOIN 이라고 한다!
+
+주의사항)
+데이터베이스는 각 테이블의 로우들이 어떻게 붙어야되는지 모른다
+-> 각 로우별 종류별로 다 붙여버린다
+-> 정확한 데이터가 아니다!!
+
+기준이 되는 컬럼이 일치하거나, 의도에 맞는지 조건식을
+WHERE절을 통해서 명시하고, 로우를 걸러내야한다!
+
+
+회원테이블     ,     결제테이블
+ID, 주민번호앞자리,  ID    주민번호 
+
+SELECT *
+  FROM 회원테이블, 결제테이블
+ WHERE 회원테이블.ID = 결제테이블.ID
+   AND 회원테이블.주민번호앞자리 
+        = SUBSTR(결제테이블.주민번호, 1, 6)
+
+SELECT ENAME, DNAME, EMP.DEPTNO, DEPT.DEPTNO
+  FROM EMP, DEPT
+ WHERE EMP.DEPTNO = DEPT.DEPTNO;
+
+- 컬럼의 이름은 동일하지 않아도 상관없다.
+
+DEPT 테이블처럼 코드값을 가지고 있고,
+상세 내용을 가지고 있는 테이블을
+-> 코드 테이블
+
+SELECT E.ENAME, D.DNAME, E.DEPTNO
+  FROM EMP E, DEPT D
+ WHERE E.DEPTNO = D.DEPTNO;
+
+테이블의 별칭은, 테이블명이 길어서 귀찮을때 보통 사용!
+- SELECT 절에 컬럼을 명시할때
+- WHERE 절에 조건식에 컬럼을 명시할때
+
+
