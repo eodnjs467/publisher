@@ -1,0 +1,127 @@
+Cahp09 JSP 액션태그
+(8챕터는 다음주에)
+
+자바로 제작해야하는 기능 일부를 사용할수 있는 태그
+- 표준 태그
+
+<html><head>...</head><body>...</body></html>
+
+<jsp:someTag attribute="value" . . . ></jsp:someTag>
+<jsp:someTag attribute="value" . . . />
+
+페이지흐름 제어
+- forward, include
+<jsp:forward>
+<jsp:include>
+-> 얘들만 봐서는 별로 액션태그 쓸모없는거 같다...
+
+<jsp:param> ★★★★
+- <jsp:forward> <jsp:include>
+-> 다른 페이지에서 서비스를 수행하게 하는게 목적
+-> 대상이 되는 페이지에 request, response 내장객체의 제어권을 넘겨준다
+
+- <jsp:param> 얘는 forward, include 할때
+  추가로 더 전달하고 싶은 파라미터를 등록할때 사용
+
+http://localhost:8081/Chap09/ActionParamFrom2.jsp?subject=testSubject
+
+http://localhost:8081/Chap09/ActionParamFrom2.jsp?subject=testSubject&rsdno=9012251122334
+
+http://localhost:8081/Chap09/ActionParamFrom2.jsp
+?subject=testSubject&rsdno=9012251122334
+
+org.apache.jasper.runtime.JspRuntimeLibrary
+.include(request, response, 
+"ActionTagParamTo2.jsp" 
++ "?" 
++ org.apache.jasper.runtime.JspRuntimeLibrary
+ .URLEncode("subject", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("Param Action Tag Example 2", request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("rsdno", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode(String.valueOf(rsdno.substring(0,6)), request.getCharacterEncoding()), out, false);
+
+
+ActionTagParamTo2.jsp
+?subject=Param Action Tag Example 2
+&rsdno=901225
+
+--------------------------------------------------------------------
+
+자바 빈(Java Bean) 클래스
+
+- 객체생성 useBean
+- setter setProperty
+- getter getProperty
+
+
+스크립팅 요소 액션 태그는
+<% %>
+<%= %>
+<%! %>
+요런식으로 쓰는게 더 간편하므로 정말 잘 사용하지 않는다.
+
+------------------------------------------------------------
+어제 숙제중에 에러처리페이지 종류별로 다 쓰는거
+
+1. try ~ catch RequestDispatcher
+2. page 지시자에 errorPage 속성으로 지정한 페이지
+3. Java에서 특정 Exception을 web.xml에 등록한 페이지
+4. Status Code(응답코드) 별로 web.xml에 등록한 페이지
+------------------------------------------------------------
+
+####################################################################
+
+액션태그 수업을하고, Chap09 연습문제도 좀 풀고,
+Chap07에 추가 숙제도 풀이하고나서도, 시간이 남아서
+Chap08 세션을 조금 진도 나가게 되었다!
+
+--------------------------------------------------------------------
+
+HTTP 프로토콜의 연결 방식★★★★★
+
+1. 웹 서비스의 동작 싸이클
+
+- 웹 클라이언트가 웹 브라우저를 통해서
+  주소를 직접 치거나, 버튼을 클릭 하거나 등의 행동을 해서
+  HyperLink 를 활요하여, 웹 서버 쪽으로 서비스 요청을 한다.
+
+- 웹 서버쪽에서는 웹 클라이언트의 요청을 분석해서
+  요구하는 서비스 페이지 (HTML) 를 응답한다.
+
+- 웹 클라이언트에서는 웹서버에서 전송한 HTML을 
+  웹 브라우저를 통해서 화면으로 출력된걸 또 본다
+
+이 싸이클대로 움직이는
+한번 요청 -> 한번 응답 받으면
+기본적으로 HTTP 프로토콜은 연결이 끊어진다.
+-> 연결 지속성이 없다.
+
+p.288 URL Rewriting
+
+
+http://localhost:8081/Chap08
+/URLRewritingLoginChk.jsp
+?id=testid&pw=1234
+
+http://localhost:8081/Chap08
+/URLRewritingPwChk.jsp
+?id=testid&pw=1234
+
+URL Rewriting 방식은
+- 일단 데이터가 URL주소에 다 노출되어서 보안상 위험이 크다.
+-> 아예 쓰면안된다. 크리티컬한 데이터는
+
+- 모든 페이지에서 어느 아디디로 접속한 사람이 요청을 보내고 있는지
+  매 페이지마다 계속 데이터를 보내줘야한다.
+-> 매 페이지마다 그 데이터를 꺼내는 작업도 해줘야한다.
+
+
+세션(session)
+- 원래는 연결이 유지되지 않지만,
+  연결을 유지하는 것처럼 속여서 사용하는 방법
+
+-> 원리는 URL Rewriting 방식과 거의 동일
+
+-------------
+
+다음주에 배울 세션 수업은 빠지면
+-> 이 수업을 듣는 의미가 없다.
+
+

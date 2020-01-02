@@ -1,0 +1,58 @@
+14장
+
+Model1
+- 비교적 작은 규모의 웹 서비스
+  빨리 만들어야될때
+-> 지금은 거의 쓰지 않는 방식
+
+- JSP페이지가 직접 요청을 받아들이고,
+  
+  서비스제공을 위한 기능을 가지고 있는 
+  클래스 객체를 직접 생성해서 실행
+
+  서비스 실행에 필요한 데이터를 화면에 출력
+
+
+--------------------------------------
+Model2 방식
+- MVC 패턴 기반
+-> Model : 비즈니스 로직 (Java : DB, 데이터의 가공, 프로그래밍적로직)
+   View : 요청된 서비스 출력 (JSP, HTML, CSS, JavaScript(jQuery))
+   Controller : 요청을 받아서, 요청 정보를 처리하고
+                서비스 수행에 필요한 Model Class를 호출
+		데이터를 View Page에 전달하는 역할 (Servlet)
+
+-------------------------------------------------
+[Pop-Quiz]
+Model1, Model2
+
+Model1.jsp, Model2.jsp
+- 가능한한 많이 자바 코드를 없애주세요.
+-> Action Tag, EL, JSTL 등을 사용해서
+최대한 많이 스크립틀릿과 표현식을 없애주세요.
+
+-------------------------------------------------
+
+게시판 테이블 BOARD
+
+CREATE TABLE BOARD(
+   NUM		INTEGER(8)   NOT NULL,
+   NAME		VARCHAR(20)  NOT NULL,
+   PASSWORD	VARCHAR(20)  NOT NULL,
+   SUBJECT	VARCHAR(50)  NOT NULL,
+   CONTENT	VARCHAR(500) NOT NULL,
+   WRITE_DATE   DATE	     NOT NULL,
+   WRITE_TIME	TIME	     NOT NULL,
+   REF		INTEGER(8)   NOT NULL,
+   STEP         INTEGER(8)   NOT NULL,
+   LEV		INTEGER(8)   NOT NULL,
+   READ_CNT     INTEGER(8)   NOT NULL,
+   CHILD_CNT    INTEGER(4)   NOT NULL,
+   PRIMARY KEY(NUM)
+)
+
+-------------------------------------------------
+
+
+
+
